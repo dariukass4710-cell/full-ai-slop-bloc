@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">YouTube</p>
+      <h1>Full-AI Slop Block</h1>
+    </div>
+    <label class="switch">
+      <input id="enabled" type="checkbox" />
+      <span></span>
+    </label>
+  </header>
+  <p class="note">Channel marks and blocked videos train a local pattern. After two blocks, similar titles fade, then hide. Three blocked videos from one channel mark that channel too. Nothing is uploaded.</p>
+  <label class="field">
+    Mode
+    <select id="mode">
+      <option value="channels">Full-AI channels only</option>
+      <option value="labels">Also hide YouTube's photoreal AI label</option>
+    </select>
+  </label>
+  <label class="check"><input id="learnSimilar" type="checkbox" /> Train on blocked channels and videos</label>
+  <label class="check"><input id="hideInFeeds" type="checkbox" /> Hide matches in Home, Search, and sidebar</label>
+  <label class="check"><input id="coverPlayer" type="checkbox" /> Cover the player on a match</label>
+  <label class="check"><input id="blockAutoplay" type="checkbox" /> Pause playback when covered</label>
+  <div class="stats">
+    <div><strong id="videos">0</strong><span>videos blocked</span></div>
+    <div><strong id="learned">0</strong><span>learned hides</span></div>
+  </div>
+  <button id="options" type="button">Edit channel lists</button>
+  <script src="popup.js"></script>
+</body>
+</html>

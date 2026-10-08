@@ -1,0 +1,110 @@
+body {
+  width: 320px;
+  margin: 0;
+  padding: 16px;
+  background: #121418;
+  color: #f3efe6;
+  font: 13px/1.4 "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #e85c4a;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 2px 0 0;
+  font-size: 18px;
+}
+
+.note, .check, .field {
+  display: block;
+  margin: 12px 0;
+  color: #c8c2b8;
+}
+
+.field select, button {
+  width: 100%;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #2c3036;
+  background: #1b1e24;
+  color: #f3efe6;
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.stats div {
+  padding: 10px;
+  border-radius: 10px;
+  background: #1b1e24;
+}
+
+.stats strong {
+  display: block;
+  font-size: 18px;
+}
+
+.stats span, .check {
+  color: #b7b1a6;
+}
+
+.switch {
+  position: relative;
+  width: 42px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch span {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #2c3036;
+}
+
+.switch span:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.15s ease;
+}
+
+.switch input:checked + span {
+  background: #e85c4a;
+}
+
+.switch input:checked + span:before {
+  transform: translateX(18px);
+}

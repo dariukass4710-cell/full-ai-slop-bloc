@@ -1,0 +1,131 @@
+:root {
+  --fasb-bg: #14161a;
+  --fasb-ink: #f3efe6;
+  --fasb-muted: #b7b1a6;
+  --fasb-line: #2c3036;
+  --fasb-accent: #e85c4a;
+}
+
+.fasb-card {
+  position: relative !important;
+  min-height: 72px;
+}
+
+.fasb-card > :not(.fasb-notice) {
+  visibility: hidden !important;
+}
+
+.fasb-notice {
+  position: absolute;
+  inset: 8px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--fasb-line);
+  border-radius: 10px;
+  background: var(--fasb-bg);
+  color: var(--fasb-ink);
+  font: 13px/1.35 "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.fasb-notice strong {
+  display: block;
+  font-weight: 650;
+}
+
+.fasb-notice span {
+  color: var(--fasb-muted);
+  font-size: 12px;
+}
+
+.fasb-notice button,
+.fasb-player button,
+.fasb-mark {
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 12px;
+  background: var(--fasb-accent);
+  color: white;
+  font: 600 12px/1 "Segoe UI", Roboto, Arial, sans-serif;
+  cursor: pointer;
+}
+
+.fasb-notice button.fasb-ghost,
+.fasb-player button.fasb-ghost,
+.fasb-mark.fasb-ghost {
+  background: transparent;
+  color: var(--fasb-ink);
+  border: 1px solid var(--fasb-line);
+}
+
+.fasb-player-wrap {
+  position: relative !important;
+}
+
+.fasb-player {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(12, 13, 16, 0.94);
+  color: var(--fasb-ink);
+  text-align: center;
+}
+
+.fasb-player-card {
+  max-width: 460px;
+}
+
+.fasb-player h2 {
+  margin: 0 0 8px;
+  font: 650 22px/1.2 "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.fasb-player p {
+  margin: 0 0 16px;
+  color: var(--fasb-muted);
+  font: 14px/1.45 "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.fasb-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fasb-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #3a241f;
+  color: #ffb4a8;
+  font: 600 11px/1.4 "Segoe UI", Roboto, Arial, sans-serif;
+  vertical-align: middle;
+}
+
+.fasb-dim {
+  opacity: 0.42;
+  filter: grayscale(0.55);
+}
+
+.fasb-dim-chip {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  z-index: 4;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(20, 22, 26, 0.9);
+  color: #ffb4a8;
+  font: 600 11px/1.3 "Segoe UI", Roboto, Arial, sans-serif;
+}

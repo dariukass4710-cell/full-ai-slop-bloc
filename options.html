@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Full-AI Slop Block</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Extension settings</p>
+    <h1>Channels</h1>
+    <p>A channel on the full-AI list is hidden everywhere on YouTube. An allowed channel is never hidden, even in label mode. AI help such as scripts, captions, or thumbnails is not a signal here.</p>
+    <section>
+      <h2>Marked as fully AI</h2>
+      <form id="block-form">
+        <input id="block-name" placeholder="Channel name" required />
+        <input id="block-id" placeholder="Channel id UC… or @handle" required />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="blocked"></ul>
+    </section>
+    <section>
+      <h2>Blocked videos</h2>
+      <ul id="videos"></ul>
+    </section>
+    <section>
+      <h2>Training</h2>
+      <p id="train-status">No channels trained yet.</p>
+      <button id="reset-training" type="button">Reset learned pattern</button>
+    </section>
+    <section>
+      <h2>Always allow</h2>
+      <form id="allow-form">
+        <input id="allow-name" placeholder="Channel name" required />
+        <input id="allow-id" placeholder="Channel id UC… or @handle" required />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="allowed"></ul>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
